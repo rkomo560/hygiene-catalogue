@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygiene Product Catalogue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f1e9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            background-image: linear-gradient(to bottom, rgba(180, 31, 58, 0.1), #f8f1e9);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #b41f3a;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #b41f3a;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #b41f3a #f8f1e9;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: #f8f1e9;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: #b41f3a;
+            border-radius: 4px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #b41f3a;
+            color: white;
+            text-align: left;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+            position: relative;
+        }
+
+        .button i {
+            margin-right: 15px;
+            font-size: 1.4rem;
+        }
+
+        .button .fa-download {
+            margin-left: auto;
+            font-size: 1.2rem;
+        }
+
+        .button:hover {
+            background-color: #8e1a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header img {
+                max-width: 120px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .button {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+
+            .button i {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                max-width: 100px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 12px;
+            }
+
+            .button i {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="jnanpalace.png" alt="Marriott Logo" class="logo">
+        <div class="header-text">
+            <h1>Hygiene Product Catalogue</h1>
+            <h2>Accès Rapide aux Documents - Employés</h2>
+        </div>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Rechercher un document..." aria-label="Rechercher un document">
+    </div>
+
+    <div class="container" id="documentContainer">
+        <a href="FT_et_FDS\Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button" aria-label="Solid Pantastic Plus FT"><i class="fas fa-broom"></i> Solid Pantastic Plus FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button" aria-label="OC Chlorine Sanitizer FT"><i class="fas fa-broom"></i> OC Chlorine Sanitizer FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Oasis_146_Multi-Quat Sanitizer_Brochure.pdf" target="_blank" class="button" aria-label="Oasis 146 Multi-Quat Sanitizer Brochure"><i class="fas fa-broom"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Micro_Quat_BE.pdf" target="_blank" class="button" aria-label="Micro Quat BE"><i class="fas fa-broom"></i> Micro Quat BE <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Lime_A_Way_Extra_FT.pdf" target="_blank" class="button" aria-label="Lime A Way Extra FT"><i class="fas fa-broom"></i> Lime A Way Extra FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Greasecutter_Plus_FT.pdf" target="_blank" class="button" aria-label="Greasecutter Plus FT"><i class="fas fa-broom"></i> Greasecutter Plus FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\FT_Solid_Protect.pdf" target="_blank" class="button" aria-label="FT Solid Protect"><i class="fas fa-broom"></i> FT Solid Protect <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\FT_Hilios_brillant.pdf" target="_blank" class="button" aria-label="FT Hilios brillant"><i class="fas fa-broom"></i> FT Hilios brillant <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\FT_Grease_Cutter_Plus.pdf" target="_blank" class="button" aria-label="FT Grease Cutter Plus"><i class="fas fa-broom"></i> FT Grease Cutter Plus <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Express_FT.pdf" target="_blank" class="button" aria-label="Express FT"><i class="fas fa-broom"></i> Express FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Chromol.pdf" target="_blank" class="button" aria-label="Chromol"><i class="fas fa-broom"></i> Chromol <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Chlorosept_FT.pdf" target="_blank" class="button" aria-label="Chlorosept_FT"><i class="fas fa-broom"></i> Chlorosept_FT <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Clear_Dry_Classic.pdf" target="_blank" class="button" aria-label="Clear Dry Classic"><i class="fas fa-broom"></i> Clear Dry Classic <i class="fas fa-download"></i></a>
+    </div>
+
+    <footer>
+        <p>Marriott International © 2025 - Accès réservé aux employés</p>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                const text = button.textContent.toLowerCase();
+                button.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
