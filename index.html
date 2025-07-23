@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Hygiene Product Catalogue</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -15,11 +15,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh; /* Hauteur fixe à 100% de la fenêtre */
+            min-height: 100vh; /* Changé de height à min-height pour mobile */
             overflow: hidden; /* Empêche le défilement global */
             padding: 20px;
             box-sizing: border-box;
             background-image: linear-gradient(to bottom, rgba(180, 31, 58, 0.1), #f8f1e9);
+            position: fixed; /* Fixe le body pour éviter tout défilement */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         header {
@@ -71,7 +76,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             flex-grow: 1; /* Prend l'espace restant */
-            max-height: calc(100vh - 250px); /* Ajuste la hauteur pour l'espace disponible */
+            max-height: calc(100vh - 250px); /* Hauteur ajustée pour desktop */
             overflow-y: auto; /* Défilement uniquement dans le conteneur */
             scrollbar-width: thin;
             scrollbar-color: #b41f3a #f8f1e9;
@@ -151,7 +156,7 @@
             .container {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 15px;
-                max-height: calc(100vh - 220px); /* Ajustement pour écrans plus petits */
+                max-height: calc(100svh - 200px); /* Utilise svh pour mobile */
             }
 
             .button {
@@ -180,7 +185,7 @@
             .container {
                 grid-template-columns: 1fr;
                 gap: 10px;
-                max-height: calc(100vh - 200px); /* Ajustement pour petits écrans */
+                max-height: calc(100svh - 180px); /* Ajustement pour petits écrans */
             }
 
             .button {
