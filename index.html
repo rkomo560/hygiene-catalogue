@@ -1,296 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Hygiene Product Catalogue</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    header {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  padding: 20px 40px;
-  margin-bottom: 30px;
-  border-radius: 0 0 12px 12px;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  max-width: 250px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.header-text {
-  text-align: left;
-}
-
-.header-text h1 {
-  color: #b41f3a;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.header-text h2 {
-  color: #555;
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-top: 8px;
-}
-
-/* Responsive header */
-@media (max-width: 600px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo {
-    max-width: 80px;
-  }
-
-  .header-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-text h2 {
-    font-size: 1rem;
-  }
-}
-
-    @font-face {
-      font-family: 'Roboto';
-      src: url('fonts/Roboto-Regular.woff2') format('woff2'),
-           url('fonts/Roboto-Regular.woff') format('woff');
-      font-display: swap;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f8f1e9;
-      color: #333;
-      box-sizing: border-box;
-      background-image: linear-gradient(to bottom, rgba(180, 31, 58, 0.1), #f8f1e9);
-      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    header img {
-      max-width: 150px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      color: #b41f3a;
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    h2 {
-      color: #555;
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-top: 5px;
-    }
-
-    .container {
-      flex: 1;
-      overflow-y: auto;
-      max-width: 1200px;
-      width: 100%;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      scrollbar-width: thin;
-      scrollbar-color: #b41f3a #f8f1e9;
-      scroll-behavior: smooth;
-      margin: 0 auto;
-    }
-
-    .container::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .container::-webkit-scrollbar-track {
-      background: #f8f1e9;
-    }
-
-    .container::-webkit-scrollbar-thumb {
-      background-color: #b41f3a;
-      border-radius: 4px;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background-color: #b41f3a;
-      color: white;
-      text-align: left;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      touch-action: manipulation;
-      position: relative;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .button i {
-      margin-right: 15px;
-      font-size: 1.4rem;
-    }
-
-    .button .fa-download {
-      margin-left: auto;
-      font-size: 1.2rem;
-    }
-
-    .button:hover {
-      background-color: #8e1a2e;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .button:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .button:focus {
-      outline: 2px solid #b41f3a;
-      outline-offset: 2px;
-    }
-
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      padding: 1rem 0;
-      flex-shrink: 0;
-      background-color: #f8f1e9;
-    }
-
-    @media (max-width: 768px) {
-      header img {
-        max-width: 120px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-
-      .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-      }
-
-      .button {
-        font-size: 1.1rem;
-        padding: 15px;
-      }
-
-      .button i {
-        font-size: 1.3rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header img {
-        max-width: 100px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 0.9rem;
-      }
-
-      .container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .button {
-        font-size: 1rem;
-        padding: 12px;
-      }
-
-      .button i {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue d'Hygiène pour Smartphones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="wrapper">
-    <header role="banner" class="header">
-        <div class="header-content">
-          <img src="jnanpalace.png" alt="Marriott Logo" class="logo">
-          <div class="header-text">
-            <h1>Hygiene Product Catalogue</h1>
-            <h2>Accès Rapide aux Documents - Employés</h2>
-          </div>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-6">Catalogue d'Hygiène pour Smartphones</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Produit 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Lingettes nettoyantes" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Lingettes Nettoyantes</h2>
+                <p class="text-gray-600">Lingettes antibactériennes pour écran.</p>
+                <p class="text-blue-600 font-bold mt-2">9,99 €</p>
+            </div>
+            <!-- Produit 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Spray désinfectant" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Spray Désinfectant</h2>
+                <p class="text-gray-600">Spray sans alcool pour smartphones.</p>
+                <p class="text-blue-600 font-bold mt-2">12,99 €</p>
+            </div>
+            <!-- Produit 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Chiffon microfibre" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Chiffon Microfibre</h2>
+                <p class="text-gray-600">Chiffon doux pour nettoyer les écrans.</p>
+                <p class="text-blue-600 font-bold mt-2">5,99 €</p>
+            </div>
+            <!-- Produit 4 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Kit de nettoyage" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Kit de Nettoyage</h2>
+                <p class="text-gray-600">Kit complet avec spray et chiffon.</p>
+                <p class="text-blue-600 font-bold mt-2">19,99 €</p>
+            </div>
+            <!-- Produit 5 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Stérilisateur UV" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Stérilisateur UV</h2>
+                <p class="text-gray-600">Boîtier UV pour désinfection.</p>
+                <p class="text-blue-600 font-bold mt-2">39,99 €</p>
+            </div>
+            <!-- Produit 6 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Gel nettoyant" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Gel Nettoyant</h2>
+                <p class="text-gray-600">Gel pour ports et boutons.</p>
+                <p class="text-blue-600 font-bold mt-2">7,99 €</p>
+            </div>
+            <!-- Produit 7 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Brosse antistatique" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Brosse Antistatique</h2>
+                <p class="text-gray-600">Brosse pour ports de charge.</p>
+                <p class="text-blue-600 font-bold mt-2">6,99 €</p>
+            </div>
+            <!-- Produit 8 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Film protecteur" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Film Protecteur</h2>
+                <p class="text-gray-600">Film antibactérien pour écran.</p>
+                <p class="text-blue-600 font-bold mt-2">14,99 €</p>
+            </div>
+            <!-- Produit 9 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Étui désinfectant" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Étui Désinfectant</h2>
+                <p class="text-gray-600">Étui avec revêtement antibactérien.</p>
+                <p class="text-blue-600 font-bold mt-2">24,99 €</p>
+            </div>
+            <!-- Produit 10 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Lingettes jetables" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Lingettes Jetables</h2>
+                <p class="text-gray-600">Pack de lingettes à usage unique.</p>
+                <p class="text-blue-600 font-bold mt-2">8,99 €</p>
+            </div>
+            <!-- Produit 11 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Spray antistatique" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Spray Antistatique</h2>
+                <p class="text-gray-600">Spray pour réduire la poussière.</p>
+                <p class="text-blue-600 font-bold mt-2">11,99 €</p>
+            </div>
+            <!-- Produit 12 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Chiffon réutilisable" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Chiffon Réutilisable</h2>
+                <p class="text-gray-600">Chiffon lavable pour nettoyage.</p>
+                <p class="text-blue-600 font-bold mt-2">4,99 €</p>
+            </div>
+            <!-- Produit 13 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Nettoyeur de port" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Nettoyeur de Port</h2>
+                <p class="text-gray-600">Outil pour ports USB-C.</p>
+                <p class="text-blue-600 font-bold mt-2">9,99 €</p>
+            </div>
+            <!-- Produit 14 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/150" alt="Boîtier UV portable" class="w-full h-40 object-cover rounded-md mb-4">
+                <h2 class="text-lg font-semibold">Boîtier UV Portable</h2>
+                <p class="text-gray-600">Stérilisateur UV compact.</p>
+                <p class="text-blue-600 font-bold mt-2">49,99 €</p>
+            </div>
         </div>
-      </header>
-      
-    <div class="container" id="documentContainer">
-      <a href="FT_et_FDS/Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Solid Pantastic Plus FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> OC Chlorine Sanitizer FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Oasis_146_Multi-Quat_Sanitizer_Brochure.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Micro_Quat_BE.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Micro Quat BE <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Lime_A_Way_Extra_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Lime A Way Extra FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Greasecutter_Plus_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Greasecutter Plus FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/FT_Solid_Protect.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> FT Solid Protect <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/FT_Hilios_brillant.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> FT Hilios brillant <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/FT_Grease_Cutter_Plus.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> FT Grease Cutter Plus <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Express_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Express FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Chromol.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Chromol <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Chlorosept_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Chlorosept FT <i class="fas fa-download"></i></a>
-      <a href="FT_et_FDS/Clear_Dry_Classic.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Clear Dry Classic <i class="fas fa-download"></i></a>
     </div>
-
-    <footer>
-      <p>Marriott International © 2025 - Accès réservé aux employés</p>
-    </footer>
-  </div>
 </body>
 </html>
