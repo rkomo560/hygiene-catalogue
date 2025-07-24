@@ -34,12 +34,25 @@
         .fade-in:nth-child(11) { animation-delay: 1.1s; }
         .fade-in:nth-child(12) { animation-delay: 1.2s; }
         .fade-in:nth-child(13) { animation-delay: 1.3s; }
+        /* Custom styles for brand color */
+        .bg-brand-primary {
+            background-color: #b41f3a;
+        }
+        .hover\:bg-brand-primary:hover {
+            background-color: #b41f3a;
+        }
+        .text-brand-primary {
+            color: #b41f3a;
+        }
+        .bg-brand-gradient {
+            background: linear-gradient(to right, #b41f3a, #e57373);
+        }
     </style>
 </head>
-<body class="bg-gradient-to-r from-gray-100 to-gray-200 font-roboto font-bold">
+<body class="bg-gradient-to-r from-gray-50 to-gray-100 font-roboto font-bold">
     <!-- Header visuel -->
     <header class="relative bg-cover bg-center h-64" style="background-image: url('https://via.placeholder.com/1200x400?text=Hygiene+Product+Banner');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="absolute inset-0 bg-brand-primary bg-opacity-60 flex items-center justify-center">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl text-white font-bold">Hygiene Product Catalogue – FT & FDS</h1>
                 <p class="text-lg text-white mt-2">Découvrez nos solutions d'hygiène professionnelles</p>
@@ -47,49 +60,47 @@
         </div>
     </header>
 
-   
-
     <!-- Contenu principal -->
     <div class="container mx-auto p-4" id="documentContainer">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <a href="FT_et_FDS/Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Solid Pantastic Plus FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Solid Pantastic Plus FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> OC Chlorine Sanitizer FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> OC Chlorine Sanitizer FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Oasis_146_Multi-Quat_Sanitizer_Brochure.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Oasis_146_Multi-Quat_Sanitizer_Brochure.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Micro_Quat_BE.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Micro Quat BE <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Micro_Quat_BE.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Micro Quat BE <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Lime_A_Way_Extra_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Lime A Way Extra FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Lime_A_Way_Extra_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Lime A Way Extra FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Greasecutter_Plus_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Greasecutter Plus FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Greasecutter_Plus_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Greasecutter Plus FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/FT_Solid_Protect.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> FT Solid Protect <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/FT_Solid_Protect.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> FT Solid Protect <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/FT_Hilios_brillant.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> FT Hilios brillant <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/FT_Hilios_brillant.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> FT Hilios brillant <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/FT_Grease_Cutter_Plus.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> FT Grease Cutter Plus <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/FT_Grease_Cutter_Plus.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> FT Grease Cutter Plus <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Express_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Express FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Express_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Express FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Chromol.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Chromol <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Chromol.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Chromol <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Chlorosept_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Chlorosept FT <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Chlorosept_FT.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Chlorosept FT <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
-            <a href="FT_et_FDS/Clear_Dry_Classic.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 fade-in">
-                <i class="fas fa-broom mr-2"></i> Clear Dry Classic <i class="fas fa-download ml-2"></i>
+            <a href="FT_et_FDS/Clear_Dry_Classic.pdf" target="_blank" class="button flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:bg-brand-primary hover:text-white fade-in">
+                <i class="fas fa-broom mr-2 text-brand-primary"></i> Clear Dry Classic <i class="fas fa-download ml-2 text-brand-primary"></i>
             </a>
         </div>
     </div>
