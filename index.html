@@ -7,6 +7,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
+    header {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  border-radius: 0 0 12px 12px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  color: #b41f3a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-text h2 {
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* Responsive header */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-text h2 {
+    font-size: 1rem;
+  }
+}
+
     @font-face {
       font-family: 'Roboto';
       src: url('fonts/Roboto-Regular.woff2') format('woff2'),
@@ -201,13 +263,15 @@
 <body>
   <div class="wrapper">
     <header role="banner" class="header">
-      <img src="jnanpalace.png" alt="Marriott Logo" class="logo">
-      <div class="header-text">
-        <h1>Hygiene Product Catalogue</h1>
-        <h2>Accès Rapide aux Documents - Employés</h2>
-      </div>
-    </header>
-
+        <div class="header-content">
+          <img src="jnanpalace.png" alt="Marriott Logo" class="logo">
+          <div class="header-text">
+            <h1>Hygiene Product Catalogue</h1>
+            <h2>Accès Rapide aux Documents - Employés</h2>
+          </div>
+        </div>
+      </header>
+      
     <div class="container" id="documentContainer">
       <a href="FT_et_FDS/Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> Solid Pantastic Plus FT <i class="fas fa-download"></i></a>
       <a href="FT_et_FDS/OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button"><i class="fas fa-broom"></i> OC Chlorine Sanitizer FT <i class="fas fa-download"></i></a>
