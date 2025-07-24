@@ -15,12 +15,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh; /* Changé de height à min-height pour mobile */
-            overflow: hidden; /* Empêche le défilement global */
+            min-height: 100vh;
+            overflow: hidden;
             padding: 20px;
             box-sizing: border-box;
             background-image: linear-gradient(to bottom, rgba(180, 31, 58, 0.1), #f8f1e9);
-            position: fixed; /* Fixe le body pour éviter tout défilement */
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -53,21 +53,6 @@
             margin-top: 5px;
         }
 
-        .search-bar {
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #b41f3a;
-            border-radius: 8px;
-            outline: none;
-        }
-
         .container {
             max-width: 1200px;
             width: 100%;
@@ -75,9 +60,9 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            flex-grow: 1; /* Prend l'espace restant */
-            max-height: calc(100vh - 250px); /* Hauteur ajustée pour desktop */
-            overflow-y: auto; /* Défilement uniquement dans le conteneur */
+            flex-grow: 1;
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
             scrollbar-width: thin;
             scrollbar-color: #b41f3a #f8f1e9;
         }
@@ -156,7 +141,7 @@
             .container {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 15px;
-                max-height: calc(100svh - 200px); /* Utilise svh pour mobile */
+                max-height: calc(100svh - 200px);
             }
 
             .button {
@@ -185,7 +170,7 @@
             .container {
                 grid-template-columns: 1fr;
                 gap: 10px;
-                max-height: calc(100svh - 180px); /* Ajustement pour petits écrans */
+                max-height: calc(100svh - 180px);
             }
 
             .button {
@@ -208,10 +193,6 @@
         </div>
     </header>
 
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Rechercher un document..." aria-label="Rechercher un document">
-    </div>
-
     <div class="container" id="documentContainer">
         <a href="FT_et_FDS\Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button" aria-label="Solid Pantastic Plus FT"><i class="fas fa-broom"></i> Solid Pantastic Plus FT <i class="fas fa-download"></i></a>
         <a href="FT_et_FDS\OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button" aria-label="OC Chlorine Sanitizer FT"><i class="fas fa-broom"></i> OC Chlorine Sanitizer FT <i class="fas fa-download"></i></a>
@@ -231,17 +212,5 @@
     <footer>
         <p>Marriott International © 2025 - Accès réservé aux employés</p>
     </footer>
-
-    <script>
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const buttons = document.querySelectorAll('.button');
-            buttons.forEach(button => {
-                const text = button.textContent.toLowerCase();
-                button.style.display = text.includes(searchTerm) ? 'flex' : 'none';
-            });
-        });
-    </script>
 </body>
 </html>
