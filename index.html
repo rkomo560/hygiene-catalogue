@@ -14,22 +14,15 @@
             color: #333;
             display: flex;
             flex-direction: column;
-            align-items: center;
             min-height: 100vh;
-            overflow: hidden;
-            padding: 20px;
             box-sizing: border-box;
             background-image: linear-gradient(to bottom, rgba(180, 31, 58, 0.1), #f8f1e9);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
         }
 
         header {
             text-align: center;
-            margin-bottom: 20px;
+            padding: 20px;
+            flex-shrink: 0;
         }
 
         header img {
@@ -61,7 +54,6 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             flex-grow: 1;
-            max-height: calc(100vh - 250px);
             overflow-y: auto;
             scrollbar-width: thin;
             scrollbar-color: #b41f3a #f8f1e9;
@@ -94,7 +86,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             touch-action: manipulation;
-            position: relative;
         }
 
         .button i {
@@ -119,10 +110,11 @@
         }
 
         footer {
-            margin-top: 20px;
             text-align: center;
             color: #777;
             font-size: 0.9rem;
+            padding: 20px;
+            flex-shrink: 0;
         }
 
         @media (max-width: 768px) {
@@ -141,7 +133,6 @@
             .container {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 15px;
-                max-height: calc(100svh - 200px);
             }
 
             .button {
@@ -170,7 +161,6 @@
             .container {
                 grid-template-columns: 1fr;
                 gap: 10px;
-                max-height: calc(100svh - 180px);
             }
 
             .button {
@@ -196,7 +186,7 @@
     <div class="container" id="documentContainer">
         <a href="FT_et_FDS\Solid_Pantastic_Plus_FT.pdf" target="_blank" class="button" aria-label="Solid Pantastic Plus FT"><i class="fas fa-broom"></i> Solid Pantastic Plus FT <i class="fas fa-download"></i></a>
         <a href="FT_et_FDS\OC_Chlorine_Sanitizer_FT.pdf" target="_blank" class="button" aria-label="OC Chlorine Sanitizer FT"><i class="fas fa-broom"></i> OC Chlorine Sanitizer FT <i class="fas fa-download"></i></a>
-        <a href="FT_et_FDS\Oasis_146_Multi-Quat Sanitizer_Brochure.pdf" target="_blank" class="button" aria-label="Oasis 146 Multi-Quat Sanitizer Brochure"><i class="fas fa-broom"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download"></i></a>
+        <a href="FT_et_FDS\Oasis_146_Multi-Quat_Sanitizer_Brochure.pdf" target="_blank" class="button" aria-label="Oasis 146 Multi-Quat Sanitizer Brochure"><i class="fas fa-broom"></i> Oasis 146 Multi-Quat Sanitizer Brochure <i class="fas fa-download"></i></a>
         <a href="FT_et_FDS\Micro_Quat_BE.pdf" target="_blank" class="button" aria-label="Micro Quat BE"><i class="fas fa-broom"></i> Micro Quat BE <i class="fas fa-download"></i></a>
         <a href="FT_et_FDS\Lime_A_Way_Extra_FT.pdf" target="_blank" class="button" aria-label="Lime A Way Extra FT"><i class="fas fa-broom"></i> Lime A Way Extra FT <i class="fas fa-download"></i></a>
         <a href="FT_et_FDS\Greasecutter_Plus_FT.pdf" target="_blank" class="button" aria-label="Greasecutter Plus FT"><i class="fas fa-broom"></i> Greasecutter Plus FT <i class="fas fa-download"></i></a>
